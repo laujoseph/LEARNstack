@@ -19,7 +19,7 @@ const Navbar = () => {
             sx={{ mr: 2 }}
           ></IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
+            Subscrybed
           </Typography>
           <Button color="inherit">Login</Button>
         </Toolbar>
