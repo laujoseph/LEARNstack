@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Typography, Box, Divider } from "@mui/material";
+import { Typography, Box, Divider, Grid } from "@mui/material";
 import ModalComponent from "../Modal/Modal";
 
 const Hero = () => {
@@ -41,11 +41,22 @@ const Hero = () => {
           <Divider style={{ color: "black" }} sx={{ borderBottomWidth: 5 }} />
           <br />
           <br />
-          <Typography variant="h4" style={{ color: "white" }}>
+          <Typography
+            variant="h4"
+            style={{ color: "white" }}
+            sx={{ marginBottom: 5 }}
+          >
             Grow, learn, and become more successful by reading some of the top
             articles by highly reputable individuals
           </Typography>
-          <ModalComponent />
+          <Grid container>
+            <ModalComponent
+              text="Signup"
+              para="Kindly enter your email and password to get started!"
+            />
+
+            <ModalComponent text="Login" />
+          </Grid>
         </Box>
       </Box>
     </div>

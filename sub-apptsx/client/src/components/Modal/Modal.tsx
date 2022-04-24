@@ -12,26 +12,42 @@ import {
   DialogContentText,
   DialogTitle,
   Divider,
+  Stack,
 } from "@mui/material";
 import { useState } from "react";
 
-const ModalComponent = () => {
+// define props
+
+interface ModalProps {
+  text: string;
+  para?: string;
+}
+const ModalComponent = ({ text, para }: ModalProps) => {
   const [open, setOpen] = useState(false);
   const handleClose = () => setOpen(false);
   const handleShow = () => setOpen(true);
 
   return (
     <div>
-      <Button variant="outlined" onClick={handleShow}>
-        Signup
+      <Button
+        style={{ display: "inline-flex" }}
+        sx={{
+          height: 70,
+          width: 120,
+          marginRight: "1rem",
+          padding: "0.75rem 4rem",
+        }}
+        variant="contained"
+        onClick={handleShow}
+      >
+        {text}
       </Button>
+
       <Dialog open={open} onClose={handleClose}>
-        <DialogTitle>Signup</DialogTitle>
+        <DialogTitle>{text}</DialogTitle>
         <Divider variant="middle" />
         <DialogContent>
-          <DialogContentText>
-            Kindly enter a username and password to get started!
-          </DialogContentText>
+          <DialogContentText>{para}</DialogContentText>
           <TextField
             autoFocus
             margin="dense"
@@ -52,8 +68,11 @@ const ModalComponent = () => {
           />
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose}>Cancel</Button>
-          <Button onClick={handleClose}>Signup</Button>
+          <Stack direction="row" spacing={2}>
+            <Button onClick={handleClose}>Cancel</Button>
+
+            <Button onClick={handleClose}>{text}</Button>
+          </Stack>
         </DialogActions>
       </Dialog>
     </div>
