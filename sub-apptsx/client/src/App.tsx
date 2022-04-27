@@ -1,13 +1,15 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Nav/Nav";
-import Hero from "./components/Hero/Hero";
+import LandingPage from "./components/pages/LandingPage";
 function App() {
   return (
     <div>
-      <Navbar />
-      <Hero />
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

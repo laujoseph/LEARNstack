@@ -16,6 +16,7 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import axios from "axios";
+
 // define props
 
 interface ModalProps {
@@ -33,7 +34,6 @@ const ModalComponent = ({ text, para, isSignupFlow }: ModalProps) => {
   const handleClose = () => setOpen(false);
   const handleShow = () => setOpen(true);
   const handleClick = async () => {
-    setOpen(true);
     let data;
     if (isSignupFlow) {
       const { data: signUpData } = await axios.post(
@@ -58,6 +58,8 @@ const ModalComponent = ({ text, para, isSignupFlow }: ModalProps) => {
     if (data.errors.length) {
       setErrorMsg(data.errors[0].msg);
     }
+    // storing token to local storage
+    localStorage.setItem("token", data.data.token);
   };
   return (
     <div>
