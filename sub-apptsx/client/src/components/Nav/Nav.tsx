@@ -6,6 +6,7 @@ import { AppBar, Box, Toolbar, Typography, Button } from "@mui/material";
 // import Button from "@mui/material/Button";
 // import IconButton from "@mui/material/IconButton";
 import IconButton from "@mui/material/IconButton";
+
 const Navbar = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -19,9 +20,13 @@ const Navbar = () => {
             sx={{ mr: 2 }}
           ></IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Subscrybed
+            LEARNstack
           </Typography>
-          <Button color="inherit">Login</Button>
+          <Button color="inherit">View Plans</Button>
+          <Button color="inherit">About Us</Button>
+          <Button href="/" color="inherit">
+            Home
+          </Button>
         </Toolbar>
       </AppBar>
     </Box>

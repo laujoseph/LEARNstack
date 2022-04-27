@@ -16,7 +16,7 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import axios from "axios";
-
+import { useNavigate } from "react-router-dom";
 // define props
 
 interface ModalProps {
@@ -33,6 +33,7 @@ const ModalComponent = ({ text, para, isSignupFlow }: ModalProps) => {
 
   const handleClose = () => setOpen(false);
   const handleShow = () => setOpen(true);
+  const navigate = useNavigate();
   const handleClick = async () => {
     let data;
     if (isSignupFlow) {
@@ -56,10 +57,11 @@ const ModalComponent = ({ text, para, isSignupFlow }: ModalProps) => {
     }
 
     if (data.errors.length) {
-      setErrorMsg(data.errors[0].msg);
+      return setErrorMsg(data.errors[0].msg);
     }
     // storing token to local storage
     localStorage.setItem("token", data.data.token);
+    navigate("/articles");
   };
   return (
     <div>
