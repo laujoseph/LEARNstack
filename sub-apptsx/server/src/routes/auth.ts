@@ -65,4 +65,54 @@ router.post(
     });
   }
 );
+
+router.post("/login", async (req, res) => {
+  const { email, password } = req.body;
+  // validating if user exists, by checking email in DB
+  const user = await User.findOne({ email });
+
+  if (!user) {
+    return res.json({
+      errors: [
+        {
+          msg: "Invalid credentials",
+        },
+      ],
+      data: null,
+    });
+  }
+
+  // compare password to hashed password from user
+  const isMatch = await bcrypt.compare(password, user.password);
+
+  if (!isMatch) {
+    return res.json({
+      errors: [
+        {
+          msg: "Invalid credentials",
+        },
+      ],
+      data: null,
+    });
+  }
+  // return token if user is found and passwords match
+  const token = await JWT.sign(
+    { email: user.email },
+    process.env.JWT_SECRET as string,
+    {
+      expiresIn: 360000,
+    }
+  );
+
+  return res.json({
+    errors: [],
+    data: {
+      token,
+      user: {
+        id: user._id,
+        email: user.email,
+      },
+    },
+  });
+});
 export default router;
