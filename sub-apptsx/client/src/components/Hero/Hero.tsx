@@ -30,7 +30,7 @@ const Hero = () => {
             sx={{ fontWeight: "bold" }}
             style={{ color: "white" }}
           >
-            Welcome to --------!
+            Welcome to LEARNstack!
           </Typography>
 
           <br />
@@ -53,9 +53,10 @@ const Hero = () => {
             <ModalComponent
               text="Signup"
               para="Kindly enter your email and password to get started!"
+              isSignupFlow={true}
             />
 
-            <ModalComponent text="Login" />
+            <ModalComponent text="Login" isSignupFlow={false} />
           </Grid>
         </Box>
       </Box>
