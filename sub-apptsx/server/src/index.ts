@@ -1,10 +1,23 @@
 import express from "express";
 import authRoutes from "./routes/auth";
-const app = express();
+import mongoose from "mongoose";
+import dotenv from "dotenv";
 
-app.use(express.json());
-app.use("/auth", authRoutes);
+dotenv.config();
+// connecting database
+mongoose
+  .connect(process.env.MONGO_URI as string)
+  .then(() => {
+    console.log("Connected to mongoDB");
 
-app.listen(8080, () => {
-  console.log(`Now listening to port 8080`);
-});
+    const app = express();
+    app.use(express.json());
+    app.use("/auth", authRoutes);
+    app.listen(8080, () => {
+      console.log(`Now listening to port 8080`);
+    });
+  })
+  .catch((error) => {
+    console.log(error);
+    throw new Error(error);
+  });

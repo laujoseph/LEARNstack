@@ -30,7 +30,7 @@ const Hero = () => {
             sx={{ fontWeight: "bold" }}
             style={{ color: "white" }}
           >
-            Welcome to Subscrybed!
+            Welcome to --------!
           </Typography>
 
           <br />

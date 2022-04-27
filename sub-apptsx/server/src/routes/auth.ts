@@ -1,6 +1,6 @@
 import express from "express";
 import { body, validationResult } from "express-validator";
-
+import User from "../models/user";
 const router = express.Router();
 
 router.post(
@@ -18,15 +18,25 @@ router.post(
         };
       });
 
-      return res.json({ errors });
+      return res.json({ errors, data: null });
     }
 
     const { email, password } = req.body;
 
-    res.json({
-      email,
-      password,
-    });
+    // returns null if no email found
+    const user = await User.findOne({ email });
+
+    if (user) {
+      return res.json({
+        errors: [
+          {
+            msg: "Email already in use",
+          },
+        ],
+        data: null,
+      });
+    }
+    res.json(user);
   }
 );
 export default router;
