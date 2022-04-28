@@ -6,8 +6,12 @@ import { AppBar, Box, Toolbar, Typography, Button } from "@mui/material";
 // import Button from "@mui/material/Button";
 // import IconButton from "@mui/material/IconButton";
 import IconButton from "@mui/material/IconButton";
+import { useContext, useState } from "react";
+import { UserContext } from "../../context";
 
 const Navbar = () => {
+  const [state, setState] = useContext(UserContext);
+  console.log(state, "nav");
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -27,6 +31,8 @@ const Navbar = () => {
           <Button href="/" color="inherit">
             Home
           </Button>
+
+          {state.data && <Button color="inherit">Logout</Button>}
         </Toolbar>
       </AppBar>
     </Box>

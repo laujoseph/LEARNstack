@@ -124,8 +124,10 @@ router.get("/me", checkAuth, async (req, res) => {
   return res.json({
     errors: [],
     data: {
-      id: user._id,
-      email: user.email,
+      user: {
+        id: user._id,
+        email: user.email,
+      },
     },
   });
 });

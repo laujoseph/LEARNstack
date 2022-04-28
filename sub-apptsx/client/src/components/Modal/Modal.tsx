@@ -33,7 +33,9 @@ const ModalComponent = ({ text, para, isSignupFlow }: ModalProps) => {
 
   const handleClose = () => setOpen(false);
   const handleShow = () => setOpen(true);
+
   const navigate = useNavigate();
+
   const handleClick = async () => {
     let data;
     if (isSignupFlow) {
