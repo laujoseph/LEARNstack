@@ -41,4 +41,5 @@ export const checkAuth = async (
       ],
     });
   }
+  console.log("Middleware passing through");
 };
