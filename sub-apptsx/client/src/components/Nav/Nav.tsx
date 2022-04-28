@@ -8,9 +8,15 @@ import { AppBar, Box, Toolbar, Typography, Button } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import { useContext, useState } from "react";
 import { UserContext } from "../../context";
-
+import { useNavigate } from "react-router-dom";
 const Navbar = () => {
   const [state, setState] = useContext(UserContext);
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    setState({ data: null, loading: false, error: null });
+    localStorage.removeItem("token");
+    navigate("/");
+  };
   console.log(state, "nav");
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -32,7 +38,11 @@ const Navbar = () => {
             Home
           </Button>
 
-          {state.data && <Button color="inherit">Logout</Button>}
+          {state.data && (
+            <Button onClick={handleLogout} color="inherit">
+              Logout
+            </Button>
+          )}
         </Toolbar>
       </AppBar>
     </Box>
