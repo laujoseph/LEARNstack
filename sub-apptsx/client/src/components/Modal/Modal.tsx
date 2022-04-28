@@ -14,9 +14,11 @@ import {
   Divider,
   Stack,
 } from "@mui/material";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../../context";
+
 // define props
 
 interface ModalProps {
@@ -36,8 +38,10 @@ const ModalComponent = ({ text, para, isSignupFlow }: ModalProps) => {
 
   const navigate = useNavigate();
 
+  const [state, setState] = useContext(UserContext);
+
   const handleClick = async () => {
-    let data;
+    let response;
     if (isSignupFlow) {
       const { data: signUpData } = await axios.post(
         "http://localhost:8080/auth/signup/",
@@ -46,7 +50,7 @@ const ModalComponent = ({ text, para, isSignupFlow }: ModalProps) => {
           password,
         }
       );
-      data = signUpData;
+      response = signUpData;
     } else {
       const { data: loginData } = await axios.post(
         "http://localhost:8080/auth/login/",
@@ -55,14 +59,26 @@ const ModalComponent = ({ text, para, isSignupFlow }: ModalProps) => {
           password,
         }
       );
-      data = loginData;
+      response = loginData;
     }
 
-    if (data.errors.length) {
-      return setErrorMsg(data.errors[0].msg);
+    if (response.errors.length) {
+      return setErrorMsg(response.errors[0].msg);
     }
+
+    setState({
+      data: {
+        id: response.data.user.id,
+        email: response.data.email,
+      },
+      loading: false,
+      error: null,
+    });
     // storing token to local storage
-    localStorage.setItem("token", data.data.token);
+    localStorage.setItem("token", response.data.token);
+    axios.defaults.headers.common[
+      "authorization"
+    ] = `Bearer ${response.data.token}`;
     navigate("/articles");
   };
   return (
