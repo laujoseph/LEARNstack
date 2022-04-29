@@ -70,6 +70,7 @@ const ModalComponent = ({ text, para, isSignupFlow }: ModalProps) => {
       data: {
         id: response.data.user.id,
         email: response.data.email,
+        customerStripeId: response.data.user.customerStripeId,
       },
       loading: false,
       error: null,

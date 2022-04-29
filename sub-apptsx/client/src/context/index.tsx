@@ -7,6 +7,7 @@ interface User {
   data: {
     id: string;
     email: string;
+    customerStripeId: string;
   } | null; // get back data is null if there's an error
   error: string | null;
   loading: boolean;
@@ -44,6 +45,7 @@ const UserProvider = ({ children }: any) => {
         data: {
           id: response.data.user.id,
           email: response.data.user.email,
+          customerStripeId: response.data.user.customerStripeId,
         },
         loading: false,
         error: null,
