@@ -1,2 +1,2 @@
 # LEARNstack
-Subscription based app to view various lessons by reknown instructors of their field.
+Subscription based app to view various lessons by renowned instructors of their field.
