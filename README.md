@@ -1,2 +1,2 @@
-# Subscrybed
-Subscription based app to view various articles.
+# LEARNstack
+Subscription based app to view various classes.
