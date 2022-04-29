@@ -32,7 +32,9 @@ const Navbar = () => {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             LEARNstack
           </Typography>
-          <Button color="inherit">View Plans</Button>
+          <Button href="/article-plans" color="inherit">
+            View Plans
+          </Button>
           <Button color="inherit">About Us</Button>
           <Button href="/" color="inherit">
             Home

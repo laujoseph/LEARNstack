@@ -25,6 +25,17 @@ const ArticlesPlan = () => {
     console.log(response.data);
     setPrices(response.data);
   };
+
+  const createSession = async (priceId: string) => {
+    const { data: response } = await axios.post(
+      "http://localhost:8080/subs/session",
+      {
+        priceId,
+      }
+    );
+    // this leads to the strpe checkout page
+    window.location.href = response.url;
+  };
   return (
     <Container>
       <Grid container rowSpacing={2} spacing={4}>
@@ -51,7 +62,11 @@ const ArticlesPlan = () => {
                   </CardContent>
                 </CardActionArea>
                 <CardActions>
-                  <Button size="medium" color="primary">
+                  <Button
+                    onClick={() => createSession(price.id)}
+                    size="medium"
+                    color="primary"
+                  >
                     Buy Now
                   </Button>
                 </CardActions>

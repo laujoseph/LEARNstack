@@ -15,12 +15,13 @@ router.get("/prices", checkAuth, async (req, res) => {
 });
 
 // stripe checkout route
+// creates a subscription session, link item to user.
 router.post("/session", checkAuth, async (req, res) => {
   const user = await User.findOne({ email: req.user });
   const session = await stripe.checkout.sessions.create(
     {
       mode: "subscription",
-      payment_method_types: ["card", "grabpay", "paynow", "wechat_pay"],
+      payment_method_types: ["card"],
       line_items: [
         {
           price: req.body.priceId,
