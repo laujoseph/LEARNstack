@@ -7,5 +7,7 @@ export const ProtectedRoute = () => {
 
   if (state.loading) return <div>Spinner...</div>;
 
+  // if user is logged in, we return outlet.
+  // outlet is a component that will return the CHILD inside the component
   return state.data ? <Outlet /> : <Navigate to="/" />;
 };
