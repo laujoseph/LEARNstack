@@ -8,6 +8,7 @@ import {
   AccordionDetails,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+
 const FaqBar = () => {
   return (
     <Grid
@@ -40,17 +41,21 @@ const FaqBar = () => {
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
             id="panel1a-header"
+            sx={{ backgroundColor: "#424242" }}
           >
-            <Typography fontWeight="fontWeightBold">
-              What is LEARNstack?
+            <Typography color="common.white" fontWeight="fontWeightBold">
+              What is MusterClass?
             </Typography>
           </AccordionSummary>
-          <AccordionDetails>
-            <Typography sx={{ minWidth: "250px", maxWidth: "600px" }}>
-              LEARNstack is a platform that makes it possible for anyone to read
-              lessons taught by the world's best. Whether it be in cooking,
-              sports or music, LEARNstack delivers a world class online learning
-              experience.
+          <AccordionDetails sx={{ backgroundColor: "#424242" }}>
+            <Typography
+              color="common.white"
+              sx={{ minWidth: "250px", maxWidth: "600px" }}
+            >
+              MusterClass is a platform that makes it possible for anyone to
+              read lessons taught by the world's best. Whether it be in cooking,
+              sports or music, MusterClass delivers a world class online
+              learning experience.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -60,14 +65,18 @@ const FaqBar = () => {
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel2a-content"
             id="panel2a-header"
+            sx={{ backgroundColor: "#424242" }}
           >
-            <Typography fontWeight="fontWeightBold">
+            <Typography color="common.white" fontWeight="fontWeightBold">
               Where can I read?
             </Typography>
           </AccordionSummary>
-          <AccordionDetails>
-            <Typography sx={{ minWidth: "250px", maxWidth: "600px" }}>
-              With LEARNstack, you can learn and be inspired anytime, anywhere,
+          <AccordionDetails sx={{ backgroundColor: "#424242" }}>
+            <Typography
+              color="common.white"
+              sx={{ minWidth: "250px", maxWidth: "600px" }}
+            >
+              With MusterClass, you can learn and be inspired anytime, anywhere,
               including your smartphone, personal computer and even your samsung
               fridge(if it allows for browser usage)
             </Typography>
@@ -79,14 +88,18 @@ const FaqBar = () => {
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel2a-content"
             id="panel2a-header"
+            sx={{ backgroundColor: "#424242" }}
           >
-            <Typography fontWeight="fontWeightBold">
+            <Typography color="common.white" fontWeight="fontWeightBold">
               Which classes are right for me?
             </Typography>
           </AccordionSummary>
-          <AccordionDetails>
-            <Typography sx={{ minWidth: "250px", maxWidth: "600px" }}>
-              LEARNstack offers 17+ classes across a variety of categories,
+          <AccordionDetails sx={{ backgroundColor: "#424242" }}>
+            <Typography
+              color="common.white"
+              sx={{ minWidth: "250px", maxWidth: "600px" }}
+            >
+              MusterClass offers 17+ classes across a variety of categories,
               including sports, cooking and music. Every class has been designed
               to be accessible for people with little to no experience and
               advanced students alike. With new classes launching regularly, you
@@ -109,13 +122,17 @@ const FaqBar = () => {
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
             id="panel1a-header"
+            sx={{ backgroundColor: "#424242" }}
           >
-            <Typography fontWeight="fontWeightBold">
-              How much does LEARNstack cost?
+            <Typography color="common.white" fontWeight="fontWeightBold">
+              How much does MusterClass cost?
             </Typography>
           </AccordionSummary>
-          <AccordionDetails>
-            <Typography sx={{ minWidth: "250px", maxWidth: "600px" }}>
+          <AccordionDetails sx={{ backgroundColor: "#424242" }}>
+            <Typography
+              color="common.white"
+              sx={{ minWidth: "250px", maxWidth: "600px" }}
+            >
               We have 3 different monthly subscription tiers starting with the
               Basic at $10/month, Standard at $15/month and Premium at
               $20/month.
@@ -128,13 +145,17 @@ const FaqBar = () => {
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel2a-content"
             id="panel2a-header"
+            sx={{ backgroundColor: "#424242" }}
           >
-            <Typography fontWeight="fontWeightBold">
+            <Typography color="common.white" fontWeight="fontWeightBold">
               Will I be charged taxes?
             </Typography>
           </AccordionSummary>
-          <AccordionDetails>
-            <Typography sx={{ minWidth: "250px", maxWidth: "600px" }}>
+          <AccordionDetails sx={{ backgroundColor: "#424242" }}>
+            <Typography
+              color="common.white"
+              sx={{ minWidth: "250px", maxWidth: "600px" }}
+            >
               No.
             </Typography>
           </AccordionDetails>
@@ -145,13 +166,17 @@ const FaqBar = () => {
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel2a-content"
             id="panel2a-header"
+            sx={{ backgroundColor: "#424242" }}
           >
-            <Typography fontWeight="fontWeightBold">
+            <Typography color="common.white" fontWeight="fontWeightBold">
               How does the 30-day guarantee work?
             </Typography>
           </AccordionSummary>
-          <AccordionDetails>
-            <Typography sx={{ minWidth: "250px", maxWidth: "600px" }}>
+          <AccordionDetails sx={{ backgroundColor: "#424242" }}>
+            <Typography
+              color="common.white"
+              sx={{ minWidth: "250px", maxWidth: "600px" }}
+            >
               There is none.
             </Typography>
           </AccordionDetails>
@@ -162,15 +187,19 @@ const FaqBar = () => {
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel2a-content"
             id="panel2a-header"
+            sx={{ backgroundColor: "#424242" }}
           >
-            <Typography fontWeight="fontWeightBold">
+            <Typography color="common.white" fontWeight="fontWeightBold">
               How do I cancel?
             </Typography>
           </AccordionSummary>
-          <AccordionDetails>
-            <Typography sx={{ minWidth: "250px", maxWidth: "600px" }}>
+          <AccordionDetails sx={{ backgroundColor: "#424242" }}>
+            <Typography
+              color="common.white"
+              sx={{ minWidth: "250px", maxWidth: "600px" }}
+            >
               Please don't. But if you insist, please email us at
-              "LEARNstack@email.com"
+              "MusterClass@email.com"
             </Typography>
           </AccordionDetails>
         </Accordion>

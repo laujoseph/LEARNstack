@@ -42,22 +42,29 @@ const Articles = () => {
                 sx={{
                   maxWidth: 375,
                   borderRadius: 8,
+                  minHeight: 900,
+                  maxHeight: 900,
                 }}
                 key={article.id}
               >
                 <CardActionArea>
                   <CardMedia
                     component="img"
-                    height="60%"
+                    height="100%"
                     image={article.imageUrl}
-                    alt="picture of price"
+                    alt="Instructor image"
                   />
                   <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
+                    <Typography gutterBottom variant="h6" component="div">
                       {article.title}
                     </Typography>
                     <Divider />
-                    <Typography gutterBottom variant="h6" component="div">
+                    <Typography
+                      sx={{ marginTop: 1 }}
+                      gutterBottom
+                      variant="h6"
+                      component="div"
+                    >
                       {article.content}
                     </Typography>
                   </CardContent>

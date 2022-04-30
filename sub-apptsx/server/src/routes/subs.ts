@@ -19,15 +19,15 @@ router.get("/prices", checkAuth, async (req, res) => {
 router.post("/session", checkAuth, async (req, res) => {
   const user = await User.findOne({ email: req.user });
 
-  Article.create({
-    title: "Thomas Keller's Cooking Techniques ",
-    imageUrl:
-      "https://www.hollywoodreporter.com/wp-content/uploads/2016/06/thomas_keller_getty_p_2016.jpg",
-    content:
-      "Chef Thomas Keller’s MasterClass is devoted to preparing seafood, sous vide cooking, and making classic desserts.",
-    access: "Standard",
-    category: "Food",
-  });
+  // Article.create({
+  //   title: "Thomas Keller's Cooking Techniques ",
+  //   imageUrl:
+  //     "https://www.hollywoodreporter.com/wp-content/uploads/2016/06/thomas_keller_getty_p_2016.jpg",
+  //   content:
+  //     "Chef Thomas Keller’s MasterClass is devoted to preparing seafood, sous vide cooking, and making classic desserts.",
+  //   access: "Standard",
+  //   category: "Food",
+  // });
 
   const session = await stripe.checkout.sessions.create(
     {

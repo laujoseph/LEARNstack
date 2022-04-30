@@ -29,8 +29,12 @@ const Navbar = () => {
             aria-label="menu"
             sx={{ mr: 2 }}
           ></IconButton>
+          <img
+            style={{ height: "50px", width: "50px" }}
+            src="https://i.imgur.com/JTagWOF.png"
+          />
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            LEARNstack
+            MusterClass
           </Typography>
           <Button href="/article-plans" color="inherit">
             View Plans
