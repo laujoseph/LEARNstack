@@ -13,7 +13,7 @@ const userSchema = new Schema({
     required: true,
     min: 5,
   },
-  customerStripeId: {
+  stripeCustomerId: {
     type: String,
     required: true,
   },
