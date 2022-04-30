@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import FaqBar from "./components/Faq/Faq";
 import Navbar from "./components/Nav/Nav";
 import Articles from "./components/pages/Articles";
 import ArticlesPlan from "./components/pages/ArticlesPlan";
@@ -7,7 +8,7 @@ import { ProtectedRoute } from "./routes/ProtectedRoute";
 
 function App() {
   return (
-    <div>
+    <div style={{ backgroundColor: "black" }}>
       <BrowserRouter>
         <Navbar />
         <Routes>
@@ -19,6 +20,7 @@ function App() {
             <Route path="/article-plans" element={<ArticlesPlan />} />
           </Route>
         </Routes>
+        <FaqBar />
       </BrowserRouter>
     </div>
   );

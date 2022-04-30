@@ -20,7 +20,7 @@ const Navbar = () => {
   console.log(state, "nav");
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar sx={{ bgcolor: "black" }} position="static">
         <Toolbar>
           <IconButton
             size="large"
