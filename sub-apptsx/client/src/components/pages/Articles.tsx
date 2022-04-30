@@ -8,6 +8,8 @@ import {
   CardContent,
   Typography,
   Divider,
+  Grid,
+  Container,
 } from "@mui/material";
 interface Article {
   id: string;
@@ -31,42 +33,44 @@ const Articles = () => {
   };
 
   return (
-    <div>
+    <Container>
       {articles.length ? (
-        <div>
+        <Grid container rowSpacing={2} spacing={4}>
           {articles.map((article) => (
-            <Card
-              sx={{
-                maxWidth: 345,
-                borderRadius: 8,
-              }}
-              key={article.id}
-            >
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height="60%"
-                  image={article.imageUrl}
-                  alt="picture of price"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    {article.title}
-                  </Typography>
-                  <Divider />
-                  <Typography gutterBottom variant="h6" component="div">
-                    {article.content}
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions></CardActions>
-            </Card>
+            <Grid sx={{}} item xs={4}>
+              <Card
+                sx={{
+                  maxWidth: 375,
+                  borderRadius: 8,
+                }}
+                key={article.id}
+              >
+                <CardActionArea>
+                  <CardMedia
+                    component="img"
+                    height="60%"
+                    image={article.imageUrl}
+                    alt="picture of price"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      {article.title}
+                    </Typography>
+                    <Divider />
+                    <Typography gutterBottom variant="h6" component="div">
+                      {article.content}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+                <CardActions></CardActions>
+              </Card>
+            </Grid>
           ))}
-        </div>
+        </Grid>
       ) : (
         <div>You don't have a plan</div>
       )}
-    </div>
+    </Container>
   );
 };
 
