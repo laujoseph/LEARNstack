@@ -33,9 +33,12 @@ const Navbar = () => {
             style={{ height: "50px", width: "50px" }}
             src="https://i.imgur.com/JTagWOF.png"
           />
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Button href="/" color="inherit" sx={{ marginRight: "auto" }}>
             MusterClass
-          </Typography>
+          </Button>
+          <Button href="/articles" color="inherit">
+            Catalog
+          </Button>
           <Button href="/article-plans" color="inherit">
             View Plans
           </Button>

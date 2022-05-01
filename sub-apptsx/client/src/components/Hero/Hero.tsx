@@ -17,37 +17,57 @@ const Hero = () => {
       >
         <Box
           style={{
-            height: "600px",
-            width: "600px",
+            height: "500px",
+            width: "500px",
             marginLeft: 200,
-            marginTop: 50,
+            marginTop: 35,
             background: `rgba(60, 60, 60, 0.7)`,
             padding: "3rem",
           }}
         >
           <Typography
-            variant="h2"
+            variant="h3"
             sx={{ fontWeight: "bold" }}
             style={{ color: "white" }}
           >
-            Welcome to LEARNstack!
+            Welcome to MusterClass!
           </Typography>
 
           <br />
-          <Typography variant="h3" style={{ color: "white" }}>
+          <Typography
+            sx={{ fontWeight: "bold" }}
+            variant="h4"
+            style={{ color: "white" }}
+          >
             {" "}
-            Feed your mind with the best
+            THEY CHANGED
           </Typography>
-          <Divider style={{ color: "black" }} sx={{ borderBottomWidth: 5 }} />
+          <Typography
+            sx={{ fontWeight: "bold" }}
+            variant="h4"
+            style={{ color: "white" }}
+          >
+            {" "}
+            THE WORLD.
+          </Typography>
+          <Typography
+            sx={{ fontWeight: "bold" }}
+            variant="h4"
+            style={{ color: "#ef4562" }}
+          >
+            {" "}
+            NOW YOU.
+          </Typography>
+          <Divider style={{ color: "black" }} sx={{ borderBottomWidth: 3 }} />
           <br />
-          <br />
+
           <Typography
             variant="h4"
             style={{ color: "white" }}
-            sx={{ marginBottom: 5 }}
+            sx={{ marginBottom: 3 }}
           >
-            Grow, learn, and become more successful by reading some of the top
-            articles by highly reputable individuals
+            Grow, learn, and become more successful by learning from highly
+            reputable individuals
           </Typography>
           <Grid container>
             <ModalComponent
@@ -59,6 +79,18 @@ const Hero = () => {
             <ModalComponent text="Login" isSignupFlow={false} />
           </Grid>
         </Box>
+        {/* to add a youtube vid for intro maybe */}
+        {/* <Box>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/E7wJTI-1dvQ"
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            // allowfullscreen
+            title="video"
+          />{" "}
+        </Box> */}
       </Box>
     </div>
   );

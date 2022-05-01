@@ -11,7 +11,7 @@ router.get("/", checkAuth, async (req, res) => {
   // this gets all the subscriptions of this particular customer
   const subscriptions = await stripe.subscriptions.list(
     {
-      customer: user.striperCustomerId,
+      customer: user.stripeCustomerId,
       status: "all",
       expand: ["data.default_payment_method"],
     },

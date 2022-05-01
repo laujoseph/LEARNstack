@@ -10,6 +10,9 @@ import {
   Divider,
   Grid,
   Container,
+  Button,
+  Stack,
+  Box,
 } from "@mui/material";
 interface Article {
   id: string;
@@ -17,6 +20,7 @@ interface Article {
   imageUrl: string;
   content: string;
   category: string;
+  access: string;
 }
 
 const Articles = () => {
@@ -34,6 +38,7 @@ const Articles = () => {
 
   return (
     <Container>
+      {/* if user has plan, show the articles  */}
       {articles.length ? (
         <Grid container rowSpacing={2} spacing={4}>
           {articles.map((article) => (
@@ -55,17 +60,30 @@ const Articles = () => {
                     alt="Instructor image"
                   />
                   <CardContent>
-                    <Typography gutterBottom variant="h6" component="div">
+                    <Typography
+                      sx={{ minHeight: "1000", maxHeight: "1000" }}
+                      gutterBottom
+                      variant="h6"
+                      component="div"
+                    >
                       {article.title}
                     </Typography>
                     <Divider />
                     <Typography
                       sx={{ marginTop: 1 }}
                       gutterBottom
-                      variant="h6"
                       component="div"
+                      variant="body2"
                     >
                       {article.content}
+                    </Typography>
+                    <Typography
+                      display="flex"
+                      alignSelf="flex-end"
+                      gutterBottom
+                      component="div"
+                    >
+                      {article.access}
                     </Typography>
                   </CardContent>
                 </CardActionArea>
@@ -75,7 +93,20 @@ const Articles = () => {
           ))}
         </Grid>
       ) : (
-        <div>You don't have a plan</div>
+        <Stack>
+          <Box sx={{ margin: "auto", marginTop: 30, height: 500, width: 500 }}>
+            <Typography color="common.white" variant="h2">
+              You don't have a plan
+            </Typography>
+            <Button
+              style={{ color: "#ef4562" }}
+              sx={{ margin: "auto" }}
+              href="/article-plans"
+            >
+              Buy a plan
+            </Button>
+          </Box>
+        </Stack>
       )}
     </Container>
   );
