@@ -20,7 +20,7 @@ const Hero = () => {
             height: "500px",
             width: "500px",
             marginLeft: 200,
-            marginTop: 35,
+            marginTop: 25,
             background: `rgba(60, 60, 60, 0.7)`,
             padding: "3rem",
           }}

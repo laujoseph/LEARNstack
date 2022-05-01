@@ -46,15 +46,20 @@ router.get("/", checkAuth, async (req, res) => {
 router.post("/create", checkAuth, async (req, res) => {
   const user = await User.findOne({ email: req.user });
 
-  Article.create({
-    title: "Gabriela Camara Teaches Mexican Cooking",
-    imageUrl: "https://i.imgur.com/Taa5BQV.jpg",
-    content:
-      "Celebrated chef Gabriela Cámara shares her approach to making Mexican food that brings people together: simple ingredients, exceptional care.",
-    access: "Basic",
-    category: "Food",
+  const newArticle = new Article({
+    title: req.body.title,
+    imageUrl: req.body.imageUrl,
+    content: req.body.content,
+    access: req.body.access,
+    category: req.body.category,
   });
 
-  return res.json(Article);
+  try {
+    await newArticle.save();
+    res.send("Article Created");
+  } catch (err) {
+    console.log(err);
+  }
 });
+
 export default router;

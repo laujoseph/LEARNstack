@@ -5,7 +5,7 @@ import { UserContext } from "../context";
 export const ProtectedRoute = () => {
   const [state, setState] = useContext(UserContext);
 
-  if (state.loading) return <div>Spinner...</div>;
+  if (state.loading) return <div>loading....</div>;
 
   // if user is logged in, we return outlet.
   // outlet is a component that will return the CHILD inside the component
