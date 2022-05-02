@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Request } from "express";
 import User from "../models/user";
 import { stripe } from "../utils/stripe";
 import { checkAuth } from "../middleware/checkAuth";
@@ -62,4 +62,18 @@ router.post("/create", checkAuth, async (req, res) => {
   }
 });
 
+router.get("/:category", checkAuth, async (req: any, res: any) => {
+  let category = req.params.category;
+  const articles = Article.find(
+    { category: category },
+    (err: any, result: any) => {
+      if (err) {
+        res.send(err);
+      }
+
+      res.send(result);
+    }
+  );
+  // console.log(articles);
+});
 export default router;
