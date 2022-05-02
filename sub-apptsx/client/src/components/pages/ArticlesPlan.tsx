@@ -41,7 +41,7 @@ const ArticlesPlan = () => {
       <Grid container rowSpacing={2} spacing={4}>
         {prices.map((price: any) => {
           return (
-            <Grid sx={{ marginTop: 50 }} item xs={4}>
+            <Grid sx={{ marginTop: 30, marginBottom: 30 }} item xs={4}>
               <Card
                 sx={{
                   maxWidth: 345,

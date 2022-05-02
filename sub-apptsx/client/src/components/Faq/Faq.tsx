@@ -6,6 +6,7 @@ import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
+  Link,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
@@ -104,7 +105,8 @@ const FaqBar = () => {
               to be accessible for people with little to no experience and
               advanced students alike. With new classes launching regularly, you
               can learn practical skills, ignite new passions, and get everyday
-              wisdom. Check out our *catalog* here!
+              wisdom. Check out our {<Link href="/articles">catalogue</Link>}{" "}
+              here!
             </Typography>
           </AccordionDetails>
         </Accordion>
