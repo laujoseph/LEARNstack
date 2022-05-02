@@ -7,6 +7,20 @@ import { checkAuth } from "../middleware/checkAuth";
 import { stripe } from "../utils/stripe";
 const router = express.Router();
 
+// Update Password
+router.put("/changepass", async (req, res) => {
+  const newPassword = await bcrypt.hash(req.body.newPassword, 10);
+  const email = req.body.email;
+  console.log(newPassword);
+  console.log(email);
+  try {
+    await User.findOneAndUpdate({ email: email }, { password: newPassword });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+// Sign up
 router.post(
   "/signup",
   body("email").isEmail().withMessage("The email is invalid"),
@@ -80,6 +94,7 @@ router.post(
   }
 );
 
+// Log in
 router.post("/login", async (req, res) => {
   const { email, password } = req.body;
   // validating if user exists, by checking email in DB

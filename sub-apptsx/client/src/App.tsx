@@ -4,11 +4,13 @@ import Navbar from "./components/Nav/Nav";
 import Articles from "./components/pages/Articles";
 import ArticlesPlan from "./components/pages/ArticlesPlan";
 import CreateArticle from "./components/pages/CreateArticle";
+import EditProfile from "./components/pages/ChangePassword";
 import FoodArticles from "./components/pages/FoodArticles";
 import LandingPage from "./components/pages/LandingPage";
 import MusicArticles from "./components/pages/MusicArticles";
 import SportsArticles from "./components/pages/SportsArticles";
 import { ProtectedRoute } from "./routes/ProtectedRoute";
+import ChangePassword from "./components/pages/ChangePassword";
 
 function App() {
   return (
@@ -22,12 +24,11 @@ function App() {
             <Route path="/articles/Food" element={<FoodArticles />} />
             <Route path="/articles/Music" element={<MusicArticles />} />
             <Route path="/articles/Sports" element={<SportsArticles />} />
+            <Route path="/articles/create" element={<CreateArticle />} />
           </Route>
+          <Route path="/changepassword" element={<ChangePassword />} />
           <Route path="/article-plans" element={<ProtectedRoute />}>
             <Route path="/article-plans" element={<ArticlesPlan />} />
-          </Route>
-          <Route path="/articles" element={<ProtectedRoute />}>
-            <Route path="/articles/create" element={<CreateArticle />} />
           </Route>
         </Routes>
         <FaqBar />

@@ -76,4 +76,5 @@ router.get("/:category", checkAuth, async (req: any, res: any) => {
   );
   // console.log(articles);
 });
+
 export default router;

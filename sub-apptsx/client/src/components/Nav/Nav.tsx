@@ -10,6 +10,8 @@ import { useContext, useState } from "react";
 import { UserContext } from "../../context";
 import { useNavigate } from "react-router-dom";
 import CatButton from "./CategoriesButton";
+import ProfileButton from "./Profile";
+
 const Navbar = () => {
   const [state, setState] = useContext(UserContext);
   const navigate = useNavigate();
@@ -38,20 +40,20 @@ const Navbar = () => {
             MusterClass
           </Button>
           <CatButton />
-
           <Button href="/article-plans" color="inherit">
             View Plans
           </Button>
-          <Button color="inherit">About Us</Button>
+
           <Button href="/" color="inherit">
             Home
           </Button>
 
-          {state.data && (
+          <ProfileButton />
+          {/* {state.data && (
             <Button onClick={handleLogout} color="inherit">
               Logout
             </Button>
-          )}
+          )} */}
         </Toolbar>
       </AppBar>
     </Box>

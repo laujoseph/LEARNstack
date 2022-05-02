@@ -205,6 +205,9 @@ const FaqBar = () => {
             </Typography>
           </AccordionDetails>
         </Accordion>
+        <Typography color="common.white">
+          All article pictures were obtained from www.masterclass.com
+        </Typography>
       </Grid>
     </Grid>
   );
