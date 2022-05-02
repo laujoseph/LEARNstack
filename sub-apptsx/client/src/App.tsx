@@ -4,7 +4,10 @@ import Navbar from "./components/Nav/Nav";
 import Articles from "./components/pages/Articles";
 import ArticlesPlan from "./components/pages/ArticlesPlan";
 import CreateArticle from "./components/pages/CreateArticle";
+import FoodArticles from "./components/pages/FoodArticles";
 import LandingPage from "./components/pages/LandingPage";
+import MusicArticles from "./components/pages/MusicArticles";
+import SportsArticles from "./components/pages/SportsArticles";
 import { ProtectedRoute } from "./routes/ProtectedRoute";
 
 function App() {
@@ -16,6 +19,9 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/articles" element={<ProtectedRoute />}>
             <Route path="/articles" element={<Articles />} />
+            <Route path="/articles/Food" element={<FoodArticles />} />
+            <Route path="/articles/Music" element={<MusicArticles />} />
+            <Route path="/articles/Sports" element={<SportsArticles />} />
           </Route>
           <Route path="/article-plans" element={<ProtectedRoute />}>
             <Route path="/article-plans" element={<ArticlesPlan />} />

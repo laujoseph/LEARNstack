@@ -9,6 +9,7 @@ import IconButton from "@mui/material/IconButton";
 import { useContext, useState } from "react";
 import { UserContext } from "../../context";
 import { useNavigate } from "react-router-dom";
+import CatButton from "./CategoriesButton";
 const Navbar = () => {
   const [state, setState] = useContext(UserContext);
   const navigate = useNavigate();
@@ -36,9 +37,8 @@ const Navbar = () => {
           <Button href="/" color="inherit" sx={{ marginRight: "auto" }}>
             MusterClass
           </Button>
-          <Button href="/articles" color="inherit">
-            Catalog
-          </Button>
+          <CatButton />
+
           <Button href="/article-plans" color="inherit">
             View Plans
           </Button>
