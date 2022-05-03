@@ -107,7 +107,7 @@ router.get("/:category", checkAuth, async (req: any, res: any) => {
     });
     return res.json(articles);
   } else {
-    const articles = await Article.find({});
+    const articles = await Article.find({ category: category });
     return res.json(articles);
   }
 
