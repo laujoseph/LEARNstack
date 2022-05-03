@@ -27,15 +27,20 @@ const ChangePassword = () => {
   const [state, setState] = useContext(UserContext);
   const [user, setUser] = useState<User[]>([]);
   const [newPassword, setNewPassword] = useState<string>("");
+  const [newPassword2, setNewPassword2] = useState<string>("");
   // "! is to tell ts that expression is not null or undefined"
   const userEmail = state.data?.email;
 
   const updatePassword = () => {
-    axios.put<any>("http://localhost:8080/auth/changepass", {
-      email: userEmail,
-      newPassword: newPassword,
-    });
-    alert("Password changed successfully!");
+    if (newPassword === newPassword2) {
+      axios.put<any>("http://localhost:8080/auth/changepass", {
+        email: userEmail,
+        newPassword: newPassword,
+      });
+      alert("Password changed successfully!");
+    } else {
+      alert("Passwords do not match.");
+    }
   };
 
   useEffect(() => {
@@ -85,7 +90,7 @@ const ChangePassword = () => {
           }}
           type="password"
           onChange={(event) => {
-            console.log(event.target.value);
+            setNewPassword2(event.target.value);
           }}
         />
 

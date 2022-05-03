@@ -55,7 +55,7 @@ export default function ProfileButton() {
               style={{ textDecoration: "none", color: "black" }}
             >
               <MenuItem sx={{ width: 120 }} onClick={handleClose}>
-                Edit
+                Reset P/W
               </MenuItem>
             </Link>
             <Link
