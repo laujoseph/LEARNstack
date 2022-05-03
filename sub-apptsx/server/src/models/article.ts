@@ -24,6 +24,9 @@ const articleSchema = new Schema({
     enum: ["Food", "Music", "Sports"],
     required: true,
   },
+  bannerUrl: {
+    type: String,
+  },
 });
 
 export default mongoose.model("Article", articleSchema);

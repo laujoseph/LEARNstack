@@ -81,17 +81,6 @@ const Hero = () => {
           </Grid>
         </Box>
         {/* to add a youtube vid for intro maybe */}
-        {/* <Box>
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/E7wJTI-1dvQ"
-            frameBorder="0"
-            allow="autoplay; encrypted-media"
-            // allowfullscreen
-            title="video"
-          />{" "}
-        </Box> */}
       </Box>
       <Carousel />
     </div>

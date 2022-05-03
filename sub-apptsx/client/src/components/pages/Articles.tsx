@@ -21,6 +21,7 @@ interface Article {
   content: string;
   category: string;
   access: string;
+  bannerUrl: string;
 }
 
 const Articles = () => {

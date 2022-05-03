@@ -11,6 +11,7 @@ import MusicArticles from "./components/pages/MusicArticles";
 import SportsArticles from "./components/pages/SportsArticles";
 import { ProtectedRoute } from "./routes/ProtectedRoute";
 import ChangePassword from "./components/pages/ChangePassword";
+import ArticleDetails from "./components/pages/ArticleDetails";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/articles/Music" element={<MusicArticles />} />
             <Route path="/articles/Sports" element={<SportsArticles />} />
             <Route path="/articles/create" element={<CreateArticle />} />
+            <Route path="/articles/:id" element={<ArticleDetails />} />
           </Route>
           <Route path="/changepassword" element={<ChangePassword />} />
           <Route path="/article-plans" element={<ProtectedRoute />}>
