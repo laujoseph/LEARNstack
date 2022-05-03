@@ -22,7 +22,7 @@ const FaqBar = () => {
       <Grid item xs={12}>
         <Typography
           fontWeight="fontWeightBold"
-          sx={{ marginBottom: 5 }}
+          sx={{ marginTop: 10, marginBottom: 5 }}
           color="common.white"
           variant="h4"
         >

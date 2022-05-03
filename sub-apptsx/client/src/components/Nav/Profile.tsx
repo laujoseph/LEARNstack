@@ -19,6 +19,7 @@ export default function ProfileButton() {
   const handleLogout = () => {
     setState({ data: null, loading: false, error: null });
     localStorage.removeItem("token");
+    alert("You are logged out.");
     navigate("/");
   };
   const handleClose = () => {

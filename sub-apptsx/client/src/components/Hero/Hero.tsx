@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Typography, Box, Divider, Grid } from "@mui/material";
 import ModalComponent from "../Modal/Modal";
+import Carousel from "../Carousel/Carousel";
 
 const Hero = () => {
   return (
@@ -92,6 +93,7 @@ const Hero = () => {
           />{" "}
         </Box> */}
       </Box>
+      <Carousel />
     </div>
   );
 };

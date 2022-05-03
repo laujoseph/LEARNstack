@@ -62,7 +62,7 @@ const ChangePassword = () => {
           Enter New Password
         </Typography>
         <TextField
-          id="outlined-textarea"
+          id="outlined-textarea1"
           label="Password"
           placeholder="New Password"
           variant="filled"
@@ -78,7 +78,7 @@ const ChangePassword = () => {
           }}
         />
         <TextField
-          id="outlined-textarea"
+          id="outlined-textarea2"
           label="Re-enter Password"
           placeholder="Re-enter Password"
           variant="filled"
