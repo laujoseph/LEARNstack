@@ -21,6 +21,8 @@ interface Article {
   content: string;
   category: string;
   access: string;
+  bannerUrl: string;
+  instructor: string;
 }
 
 const FoodArticles = () => {
@@ -53,7 +55,10 @@ const FoodArticles = () => {
                 }}
                 key={article.id}
               >
-                <CardActionArea>
+                <CardActionArea
+                  sx={{ cursor: "pointer" }}
+                  href={`/articles/course/${article.title}`}
+                >
                   <CardMedia
                     component="img"
                     height="100%"

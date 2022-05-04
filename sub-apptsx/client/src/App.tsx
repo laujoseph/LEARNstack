@@ -26,7 +26,10 @@ function App() {
             <Route path="/articles/Music" element={<MusicArticles />} />
             <Route path="/articles/Sports" element={<SportsArticles />} />
             <Route path="/articles/create" element={<CreateArticle />} />
-            <Route path="/articles/:id" element={<ArticleDetails />} />
+            <Route
+              path="/articles/course/:title"
+              element={<ArticleDetails />}
+            />
           </Route>
           <Route path="/changepassword" element={<ChangePassword />} />
           <Route path="/article-plans" element={<ProtectedRoute />}>

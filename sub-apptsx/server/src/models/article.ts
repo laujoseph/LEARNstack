@@ -27,6 +27,10 @@ const articleSchema = new Schema({
   bannerUrl: {
     type: String,
   },
+  instructor: {
+    type: String,
+    required: true,
+  },
 });
 
 export default mongoose.model("Article", articleSchema);

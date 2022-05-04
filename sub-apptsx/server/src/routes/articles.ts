@@ -64,16 +64,7 @@ router.post("/create", checkAuth, async (req, res) => {
 
 router.get("/:category", checkAuth, async (req: any, res: any) => {
   let category = req.params.category;
-  // const articles = Article.find(
-  //   { category: category },
-  //   (err: any, result: any) => {
-  //     if (err) {
-  //       res.send(err);
-  //     }
 
-  //     res.send(result);
-  //   }
-  // );
   const user = await User.findOne({ email: req.user });
   // this gets all the subscriptions of this particular customer
   const subscriptions = await stripe.subscriptions.list(
@@ -111,7 +102,33 @@ router.get("/:category", checkAuth, async (req: any, res: any) => {
     return res.json(articles);
   }
 
-  res.json(plan);
+  // res.json(plan);
+  // console.log(articles);
+});
+
+// get articles for articleDetails page
+router.get("/course/:title", checkAuth, async (req: any, res: any) => {
+  let title = req.params.title.replace("%20", " ");
+  console.log(title);
+  const user = await User.findOne({ email: req.user });
+  // this gets all the subscriptions of this particular customer
+  const subscriptions = await stripe.subscriptions.list(
+    {
+      customer: user.stripeCustomerId,
+      status: "all",
+      expand: ["data.default_payment_method"],
+    },
+    {
+      apiKey: process.env.STRIPE_SECRET_KEY,
+    }
+  );
+  // do not return articles if user has no subscription plan
+  if (!subscriptions.data.length) return res.json([]);
+
+  //@ts-ignore
+  const plan = subscriptions.data[0].plan.nickname;
+  const articles = await Article.find({ title: title });
+  return res.json(articles);
   // console.log(articles);
 });
 

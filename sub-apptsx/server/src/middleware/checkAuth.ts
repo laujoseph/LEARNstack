@@ -20,6 +20,7 @@ export const checkAuth = async (
       ],
     });
   }
+
   // splits the bearer and actual token
   token = token.split(" ")[1];
   // JWT.verify throws an error if token is invalid
