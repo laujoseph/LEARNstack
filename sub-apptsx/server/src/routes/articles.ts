@@ -43,6 +43,32 @@ router.get("/", checkAuth, async (req, res) => {
   res.json(plan);
 });
 
+router.put("/update", async (req, res) => {
+  const title = req.body.title;
+  const imageUrl = req.body.imageUrl;
+  const content = req.body.content;
+  const access = req.body.access;
+  const category = req.body.category;
+  const instructor = req.body.instructor;
+  const bannerUrl = req.body.bannerUrl;
+  console.log(instructor);
+  try {
+    await Article.findOneAndUpdate(
+      { instructor: instructor },
+      {
+        title: title,
+        imageUrl: imageUrl,
+        content: content,
+        access: access,
+        category: category,
+        bannerUrl: bannerUrl,
+        instructor: instructor,
+      }
+    );
+  } catch (err) {
+    console.log(err);
+  }
+});
 router.post("/create", checkAuth, async (req, res) => {
   const user = await User.findOne({ email: req.user });
 
@@ -52,6 +78,8 @@ router.post("/create", checkAuth, async (req, res) => {
     content: req.body.content,
     access: req.body.access,
     category: req.body.category,
+    bannerUrl: req.body.bannerUrl,
+    instructor: req.body.instructor,
   });
 
   try {

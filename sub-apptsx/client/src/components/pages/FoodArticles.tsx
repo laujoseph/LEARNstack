@@ -52,6 +52,7 @@ const FoodArticles = () => {
                   borderRadius: 8,
                   minHeight: 900,
                   maxHeight: 900,
+                  backgroundColor: "black",
                 }}
                 key={article.id}
               >
@@ -67,10 +68,15 @@ const FoodArticles = () => {
                   />
                   <CardContent>
                     <Typography
-                      sx={{ minHeight: "1000", maxHeight: "1000" }}
+                      sx={{
+                        fontWeight: "bold",
+                        minHeight: "1000",
+                        maxHeight: "1000",
+                      }}
                       gutterBottom
                       variant="h6"
                       component="div"
+                      color="white"
                     >
                       {article.title}
                     </Typography>
@@ -80,6 +86,7 @@ const FoodArticles = () => {
                       gutterBottom
                       component="div"
                       variant="body2"
+                      color="white"
                     >
                       {article.content}
                     </Typography>
@@ -88,6 +95,7 @@ const FoodArticles = () => {
                       alignSelf="flex-end"
                       gutterBottom
                       component="div"
+                      color="#ef4562"
                     >
                       {article.access}
                     </Typography>

@@ -52,6 +52,7 @@ const MusicArticles = () => {
                   borderRadius: 8,
                   minHeight: 900,
                   maxHeight: 900,
+                  backgroundColor: "black",
                 }}
                 key={article.id}
               >
@@ -71,6 +72,7 @@ const MusicArticles = () => {
                       gutterBottom
                       variant="h6"
                       component="div"
+                      color="white"
                     >
                       {article.title}
                     </Typography>
@@ -80,6 +82,7 @@ const MusicArticles = () => {
                       gutterBottom
                       component="div"
                       variant="body2"
+                      color="white"
                     >
                       {article.content}
                     </Typography>
@@ -88,6 +91,7 @@ const MusicArticles = () => {
                       alignSelf="flex-end"
                       gutterBottom
                       component="div"
+                      color="#ef4562"
                     >
                       {article.access}
                     </Typography>

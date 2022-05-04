@@ -52,6 +52,7 @@ const SportsArticles = () => {
                   borderRadius: 8,
                   minHeight: 900,
                   maxHeight: 900,
+                  backgroundColor: "black",
                 }}
                 key={article.id}
               >
@@ -71,6 +72,8 @@ const SportsArticles = () => {
                       gutterBottom
                       variant="h6"
                       component="div"
+                      color="white"
+                      fontWeight="bold"
                     >
                       {article.title}
                     </Typography>
@@ -80,6 +83,7 @@ const SportsArticles = () => {
                       gutterBottom
                       component="div"
                       variant="body2"
+                      color="white"
                     >
                       {article.content}
                     </Typography>
@@ -88,6 +92,7 @@ const SportsArticles = () => {
                       alignSelf="flex-end"
                       gutterBottom
                       component="div"
+                      color="#ef4562"
                     >
                       {article.access}
                     </Typography>

@@ -12,6 +12,7 @@ import SportsArticles from "./components/pages/SportsArticles";
 import { ProtectedRoute } from "./routes/ProtectedRoute";
 import ChangePassword from "./components/pages/ChangePassword";
 import ArticleDetails from "./components/pages/ArticleDetails";
+import UpdateArticle from "./components/pages/UpdateArticle";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="/articles/Music" element={<MusicArticles />} />
             <Route path="/articles/Sports" element={<SportsArticles />} />
             <Route path="/articles/create" element={<CreateArticle />} />
+            <Route path="/articles/update" element={<UpdateArticle />} />
             <Route
               path="/articles/course/:title"
               element={<ArticleDetails />}

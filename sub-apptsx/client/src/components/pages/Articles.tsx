@@ -39,23 +39,24 @@ const Articles = () => {
   };
 
   return (
-    <Container>
+    <Container sx={{ backgroundColor: "black" }}>
       {/* if user has plan, show the articles  */}
       {articles.length ? (
         <Grid container rowSpacing={2} spacing={4}>
           {articles.map((article) => (
-            <Grid sx={{}} item xs={4}>
+            <Grid item xs={4}>
               <Card
                 sx={{
                   maxWidth: 375,
                   borderRadius: 8,
                   minHeight: 900,
                   maxHeight: 900,
+                  backgroundColor: "black",
                 }}
                 key={article.id}
               >
                 <CardActionArea
-                  sx={{ cursor: "pointer" }}
+                  sx={{ backgroundColor: "black", cursor: "pointer" }}
                   href={`/articles/course/${article.title}`}
                 >
                   <CardMedia
@@ -66,10 +67,15 @@ const Articles = () => {
                   />
                   <CardContent>
                     <Typography
-                      sx={{ minHeight: "1000", maxHeight: "1000" }}
+                      sx={{
+                        minHeight: "1000",
+                        maxHeight: "1000",
+                        fontWeight: "bold",
+                      }}
                       gutterBottom
                       variant="h6"
                       component="div"
+                      color="white"
                     >
                       {article.title}
                     </Typography>
@@ -79,6 +85,7 @@ const Articles = () => {
                       gutterBottom
                       component="div"
                       variant="body2"
+                      color="white"
                     >
                       {article.content}
                     </Typography>
@@ -87,12 +94,13 @@ const Articles = () => {
                       alignSelf="flex-end"
                       gutterBottom
                       component="div"
+                      color="#ef4562"
                     >
                       {article.access}
                     </Typography>
                   </CardContent>
                 </CardActionArea>
-                <CardActions></CardActions>
+                <CardActions sx={{ backgroundColor: "black" }}></CardActions>
               </Card>
             </Grid>
           ))}

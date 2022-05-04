@@ -67,12 +67,12 @@ const AccordionComp = () => {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography color="common.white" fontWeight="bold">
+          <Typography color="#ef4562" fontWeight="bold">
             Meet your instructor
           </Typography>
         </AccordionSummary>
         <AccordionDetails sx={{ backgroundColor: "#181818" }}>
-          <Typography color="common.white">Greetings mortal!</Typography>
+          <Typography color="common.white">Greetings Mortal!</Typography>
         </AccordionDetails>
       </Accordion>
       {lessonPlan.map((lesson) => {

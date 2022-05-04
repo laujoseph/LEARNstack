@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import axios from "axios";
 
-const CreateArticle = () => {
+const UpdateArticle = () => {
   const [title, setTitle] = useState("");
   const [imageUrl, setImageUrl] = useState("");
   const [content, setContent] = useState("");
@@ -31,7 +31,7 @@ const CreateArticle = () => {
       bannerUrl,
       instructorName
     );
-    axios.post("http://localhost:8080/articles/create", {
+    axios.put("http://localhost:8080/articles/update", {
       title: title,
       imageUrl: imageUrl,
       content: content,
@@ -40,7 +40,7 @@ const CreateArticle = () => {
       bannerUrl: bannerUrl,
       instructor: instructorName,
     });
-    alert("Successfully created Article!");
+    alert("Successfully updated Article!");
   };
   return (
     <Stack sx={{ margin: "auto", marginBottom: 20 }}>
@@ -49,7 +49,7 @@ const CreateArticle = () => {
         color="common.white"
         variant="h2"
       >
-        Create Article
+        Update Existing Article
       </Typography>
       <TextField
         id="outlined-textarea"
@@ -175,4 +175,4 @@ const CreateArticle = () => {
   );
 };
 
-export default CreateArticle;
+export default UpdateArticle;
