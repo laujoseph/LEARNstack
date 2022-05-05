@@ -21,13 +21,11 @@ const CarouselSlide = () => {
           variant="h6"
           color="common.white"
         >
-          "These MusterClasses are perfect for when I'm in the bathroom, eating
-          or doing chores around the house, would highly recommend!" -
-          NotJoseph94
+          Sign up now and view our courses!
         </Typography>
 
         <Typography
-          sx={{ marginTop: 8, marginBottom: 3, fontWeight: "bold" }}
+          sx={{ marginTop: 15, marginBottom: 3, fontWeight: "bold" }}
           variant="h5"
           color="common.white"
         >

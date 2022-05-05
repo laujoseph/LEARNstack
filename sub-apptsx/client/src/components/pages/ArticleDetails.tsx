@@ -88,10 +88,14 @@ const ArticleDetails = () => {
               </Box>
             </Box>
 
-            <Typography sx={{ fontWeight: "Bold" }} variant="h6" color="white">
+            <Typography
+              sx={{ fontWeight: "Bold", marginTop: 5 }}
+              variant="h6"
+              color="white"
+            >
               {articles[0].title}
             </Typography>
-            <Typography variant="body1" color="white">
+            <Typography variant="body1" color="white" sx={{ marginTop: 3 }}>
               It is a long established fact that a reader will be distracted by
               the readable content of a page when looking at its layout. The
               point of using Lorem Ipsum is that it has a more-or-less normal
