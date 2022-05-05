@@ -3,6 +3,7 @@ import User from "../models/user";
 import { stripe } from "../utils/stripe";
 import { checkAuth } from "../middleware/checkAuth";
 import Article from "../models/article";
+import { resolveSoa } from "dns";
 const router = express.Router();
 
 router.get("/", checkAuth, async (req, res) => {
@@ -42,7 +43,7 @@ router.get("/", checkAuth, async (req, res) => {
 
   res.json(plan);
 });
-
+// Update Article
 router.put("/update", async (req, res) => {
   const title = req.body.title;
   const imageUrl = req.body.imageUrl;
@@ -69,6 +70,7 @@ router.put("/update", async (req, res) => {
     console.log(err);
   }
 });
+// Create Article
 router.post("/create", checkAuth, async (req, res) => {
   const user = await User.findOne({ email: req.user });
 
@@ -90,6 +92,22 @@ router.post("/create", checkAuth, async (req, res) => {
   }
 });
 
+// Delete Article
+router.post("/delete", checkAuth, async (req, res) => {
+  const checkInstructor = Article.findOne({ instructor: req.body.instructor });
+  if (!checkInstructor) {
+    res.send("error");
+  } else {
+    try {
+      await Article.findOneAndRemove({ instructor: req.body.instructor });
+    } catch (err) {
+      console.log(err);
+      res.json("Unable to fulfill request");
+    }
+  }
+});
+
+// Fetch filtered category articles
 router.get("/:category", checkAuth, async (req: any, res: any) => {
   let category = req.params.category;
 

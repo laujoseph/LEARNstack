@@ -71,6 +71,7 @@ router.post(
       email,
       password: hashedPassword,
       stripeCustomerId: customer.id,
+      isAdmin: false,
     });
 
     const token = await JWT.sign(
@@ -155,6 +156,7 @@ router.get("/me", checkAuth, async (req, res) => {
         id: user._id,
         email: user.email,
         stripeCustomerId: user.stripeCustomerId,
+        isAdmin: user.isAdmin,
       },
     },
   });

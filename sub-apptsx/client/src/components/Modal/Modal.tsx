@@ -71,6 +71,7 @@ const ModalComponent = ({ text, para, isSignupFlow }: ModalProps) => {
         id: response.data.user.id,
         email: response.data.email,
         stripeCustomerId: response.data.user.stripeCustomerId,
+        isAdmin: response.data.user.isAdmin,
       },
       loading: false,
       error: null,

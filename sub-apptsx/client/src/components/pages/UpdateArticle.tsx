@@ -43,7 +43,7 @@ const UpdateArticle = () => {
     alert("Successfully updated Article!");
   };
   return (
-    <Stack sx={{ margin: "auto", marginBottom: 20 }}>
+    <Stack sx={{ margin: "auto", marginBottom: 20, marginTop: 10 }}>
       <Typography
         sx={{ margin: "auto", marginBottom: 2 }}
         color="common.white"
@@ -51,6 +51,22 @@ const UpdateArticle = () => {
       >
         Update Existing Article
       </Typography>
+      <TextField
+        id="outlined-textarea"
+        label="Instructor Name"
+        placeholder="Instructor Name"
+        variant="filled"
+        sx={{
+          backgroundColor: "white",
+          margin: "auto",
+          minWidth: 500,
+          marginBottom: 2,
+          marginTop: 10,
+        }}
+        onChange={(event) => {
+          setInstructorname(event.target.value);
+        }}
+      />
       <TextField
         id="outlined-textarea"
         label="Title"
@@ -96,21 +112,7 @@ const UpdateArticle = () => {
           setBannerUrl(event.target.value);
         }}
       />
-      <TextField
-        id="outlined-textarea"
-        label="Instructor Name"
-        placeholder="Instructor Name"
-        variant="filled"
-        sx={{
-          backgroundColor: "white",
-          margin: "auto",
-          minWidth: 500,
-          marginBottom: 2,
-        }}
-        onChange={(event) => {
-          setInstructorname(event.target.value);
-        }}
-      />
+
       <TextField
         id="outlined-textarea"
         label="Content"

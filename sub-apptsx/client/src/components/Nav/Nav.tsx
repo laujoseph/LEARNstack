@@ -11,6 +11,7 @@ import { UserContext } from "../../context";
 import { useNavigate } from "react-router-dom";
 import CatButton from "./CategoriesButton";
 import ProfileButton from "./Profile";
+import AdminButton from "./Admin";
 
 const Navbar = () => {
   const [state, setState] = useContext(UserContext);
@@ -47,8 +48,9 @@ const Navbar = () => {
           <Button href="/" color="inherit">
             Home
           </Button>
-
+          <AdminButton />
           <ProfileButton />
+
           {/* {state.data && (
             <Button onClick={handleLogout} color="inherit">
               Logout

@@ -8,6 +8,7 @@ interface User {
     id: string;
     email: string;
     stripeCustomerId: string;
+    isAdmin: boolean;
   } | null; // get back data is null if there's an error
   error: string | null;
   loading: boolean;
@@ -46,6 +47,7 @@ const UserProvider = ({ children }: any) => {
           id: response.data.user.id,
           email: response.data.user.email,
           stripeCustomerId: response.data.user.stripeCustomerId,
+          isAdmin: response.data.user.isAdmin,
         },
         loading: false,
         error: null,

@@ -13,7 +13,7 @@ import { ProtectedRoute } from "./routes/ProtectedRoute";
 import ChangePassword from "./components/pages/ChangePassword";
 import ArticleDetails from "./components/pages/ArticleDetails";
 import UpdateArticle from "./components/pages/UpdateArticle";
-
+import DeleteArticle from "./components/pages/DeleteArticle";
 function App() {
   return (
     <div style={{ backgroundColor: "black" }}>
@@ -28,6 +28,7 @@ function App() {
             <Route path="/articles/Sports" element={<SportsArticles />} />
             <Route path="/articles/create" element={<CreateArticle />} />
             <Route path="/articles/update" element={<UpdateArticle />} />
+            <Route path="/articles/delete" element={<DeleteArticle />} />
             <Route
               path="/articles/course/:title"
               element={<ArticleDetails />}
