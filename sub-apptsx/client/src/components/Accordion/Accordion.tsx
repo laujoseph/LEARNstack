@@ -1,8 +1,5 @@
 import {
   Typography,
-  Container,
-  Grid,
-  Box,
   Accordion,
   AccordionSummary,
   AccordionDetails,

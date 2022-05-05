@@ -48,7 +48,12 @@ const ArticleDetails = () => {
           >
             {articles[0].instructor}
           </Typography>
-          <img height="100%" width="100%" src={articles[0].bannerUrl} />
+          <img
+            height="100%"
+            width="100%"
+            alt="banner"
+            src={articles[0].bannerUrl}
+          />
           <Container sx={{ margin: "auto" }}>
             <Typography
               sx={{ marginTop: 5 }}
@@ -75,7 +80,7 @@ const ArticleDetails = () => {
                   height: 410,
                   width: 500,
                   marginLeft: 10,
-                  marginTop: 37,
+                  marginTop: 40,
                   overflowY: "scroll",
                 }}
               >

@@ -1,15 +1,5 @@
 import { useState } from "react";
-import {
-  Stack,
-  TextField,
-  Typography,
-  Grid,
-  MenuItem,
-  Select,
-  FormControl,
-  InputLabel,
-  Button,
-} from "@mui/material";
+import { Stack, TextField, Typography, Button } from "@mui/material";
 import axios from "axios";
 
 const DeleteArticle = () => {

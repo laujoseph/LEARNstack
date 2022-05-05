@@ -4,9 +4,8 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Link } from "@mui/material";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { UserContext } from "../../context";
-import { useNavigate } from "react-router-dom";
 
 export default function AdminButton() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -15,13 +14,7 @@ export default function AdminButton() {
     setAnchorEl(event.currentTarget);
   };
   const [state, setState] = useContext(UserContext);
-  const navigate = useNavigate();
-  const handleLogout = () => {
-    setState({ data: null, loading: false, error: null });
-    localStorage.removeItem("token");
-    alert("You are logged out.");
-    navigate("/");
-  };
+
   const handleClose = () => {
     setAnchorEl(null);
   };

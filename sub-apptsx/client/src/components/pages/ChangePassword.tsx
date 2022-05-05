@@ -2,17 +2,7 @@ import axios from "axios";
 import { useContext, useState, useEffect } from "react";
 import { UserContext } from "../../context";
 
-import {
-  Stack,
-  TextField,
-  Typography,
-  Grid,
-  MenuItem,
-  Select,
-  FormControl,
-  InputLabel,
-  Button,
-} from "@mui/material";
+import { Stack, TextField, Typography, Button } from "@mui/material";
 
 interface User {
   email: string;
@@ -25,7 +15,7 @@ interface User {
 
 const ChangePassword = () => {
   const [state, setState] = useContext(UserContext);
-  const [user, setUser] = useState<User[]>([]);
+  // const [user, setUser] = useState<User[]>([]);
   const [newPassword, setNewPassword] = useState<string>("");
   const [newPassword2, setNewPassword2] = useState<string>("");
   // "! is to tell ts that expression is not null or undefined"
@@ -43,14 +33,14 @@ const ChangePassword = () => {
     }
   };
 
-  useEffect(() => {
-    fetchUser();
-  }, []);
+  // useEffect(() => {
+  //   fetchUser();
+  // }, []);
 
-  const fetchUser = async () => {
-    const { data: response } = await axios.get("http://localhost:8080/auth/me");
-    setUser(response);
-  };
+  // const fetchUser = async () => {
+  //   const { data: response } = await axios.get("http://localhost:8080/auth/me");
+  //   setUser(response);
+  // };
   return (
     <div>
       <Stack sx={{ margin: "auto", marginBottom: 20 }}>

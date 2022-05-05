@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useRef, useEffect, useState } from "react";
+
 import { Typography, Container, Button } from "@mui/material";
 
 const trendingCourses: { imgUrl: string; instructor: string }[] = [
@@ -17,7 +17,7 @@ const CarouselSlide = () => {
     <div>
       <Container sx={{ marginBottom: 7 }}>
         <Typography
-          sx={{ marginTop: 4, fontStyle: "italic" }}
+          sx={{ marginTop: 7, fontStyle: "italic" }}
           variant="h6"
           color="common.white"
         >

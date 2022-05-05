@@ -1,6 +1,5 @@
 import {
   Divider,
-  Container,
   Typography,
   Grid,
   Accordion,
@@ -54,9 +53,9 @@ const FaqBar = () => {
               sx={{ minWidth: "250px", maxWidth: "600px" }}
             >
               MusterClass is a platform that makes it possible for anyone to
-              read lessons taught by the world's best. Whether it be in cooking,
-              sports or music, MusterClass delivers a world class online
-              learning experience.
+              learn lessons taught by the world's best. Whether it be in
+              cooking, sports or music, MusterClass delivers a world class
+              online learning experience.
             </Typography>
           </AccordionDetails>
         </Accordion>

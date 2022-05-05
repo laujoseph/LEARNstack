@@ -4,7 +4,6 @@ import Navbar from "./components/Nav/Nav";
 import Articles from "./components/pages/Articles";
 import ArticlesPlan from "./components/pages/ArticlesPlan";
 import CreateArticle from "./components/pages/CreateArticle";
-import EditProfile from "./components/pages/ChangePassword";
 import FoodArticles from "./components/pages/FoodArticles";
 import LandingPage from "./components/pages/LandingPage";
 import MusicArticles from "./components/pages/MusicArticles";

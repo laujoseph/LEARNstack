@@ -4,7 +4,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Link } from "@mui/material";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { UserContext } from "../../context";
 import { useNavigate } from "react-router-dom";
 
