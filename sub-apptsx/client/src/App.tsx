@@ -33,7 +33,10 @@ function App() {
               element={<ArticleDetails />}
             />
           </Route>
-          <Route path="/changepassword" element={<ChangePassword />} />
+          <Route path="/changepassword" element={<ProtectedRoute />}>
+            <Route path="/changepassword" element={<ChangePassword />} />
+          </Route>
+
           <Route path="/article-plans" element={<ProtectedRoute />}>
             <Route path="/article-plans" element={<ArticlesPlan />} />
           </Route>

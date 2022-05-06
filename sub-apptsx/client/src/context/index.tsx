@@ -16,8 +16,9 @@ interface User {
 
 const UserContext = createContext<
   // useState hook that uses the User created above
-  [User, React.Dispatch<React.SetStateAction<User>>]
+  [User, React.Dispatch<React.SetStateAction<User>>] // hover over setUser to get the type
 >([
+  // this is the initial state
   { data: null, loading: true, error: null },
   // this function updates the state
   () => {},

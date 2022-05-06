@@ -8,6 +8,6 @@ export const ProtectedRoute = () => {
   if (state.loading) return <div>loading....</div>;
 
   // if user is logged in, we return outlet.
-  // outlet is a component that will return the CHILD inside the component
+  // outlet is a component that will return the CHILD inside the component with matching url
   return state.data ? <Outlet /> : <Navigate to="/" />;
 };

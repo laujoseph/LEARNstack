@@ -4,9 +4,9 @@ import JWT from "jsonwebtoken";
 
 // next = goes to the next middleware in this route
 export const checkAuth = async (
-  req: Request,
-  res: Response,
-  next: NextFunction
+  req: Request, //incoming request from the client
+  res: Response, // response gives us the ability to respond to the client
+  next: NextFunction // if everything is fine, go to the next handler
 ) => {
   let token = req.header("authorization");
 

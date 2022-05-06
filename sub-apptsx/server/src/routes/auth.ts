@@ -73,7 +73,7 @@ router.post(
       stripeCustomerId: customer.id,
       isAdmin: false,
     });
-
+    // creation of JWT token
     const token = await JWT.sign(
       { email: newUser.email },
       process.env.JWT_SECRET as string,

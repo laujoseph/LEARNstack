@@ -15,8 +15,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../context";
 
-// define props
-
+// define prop types
 interface ModalProps {
   text: string;
   para?: string;

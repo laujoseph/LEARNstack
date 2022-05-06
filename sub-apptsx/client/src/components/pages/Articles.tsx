@@ -107,13 +107,13 @@ const Articles = () => {
         </Grid>
       ) : (
         <Stack>
-          <Box sx={{ margin: "auto", marginTop: 30, height: 500, width: 500 }}>
-            <Typography color="common.white" variant="h2">
+          <Box sx={{ margin: "auto", marginTop: 30 }}>
+            <Typography color="common.white" variant="h1" sx={{}}>
               You don't have a plan
             </Typography>
             <Button
               style={{ color: "#ef4562" }}
-              sx={{ margin: "auto" }}
+              sx={{ margin: "auto", fontSize: 20, marginBottom: 20 }}
               href="/article-plans"
             >
               Buy a plan
