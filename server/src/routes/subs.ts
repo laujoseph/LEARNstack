@@ -29,8 +29,8 @@ router.post("/session", checkAuth, async (req, res) => {
           quantity: 1,
         },
       ],
-      success_url: "/articles",
-      cancel_url: "/article-plans",
+      success_url: "https://musterclass-client.vercel.app/articles",
+      cancel_url: "https://musterclass-client.vercel.app/article-plans",
       customer: user.stripeCustomerId,
     },
     {
