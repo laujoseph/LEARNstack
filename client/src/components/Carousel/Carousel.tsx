@@ -74,10 +74,7 @@ const CarouselSlide = () => {
           </motion.div>
         </motion.h1>
       </Container>
-      <a
-        style={{ textDecoration: "none" }}
-        href="https://musterclass-client.vercel.app/articles"
-      >
+      <a style={{ textDecoration: "none" }} href="/articles">
         <Button
           sx={{
             display: "flex",
