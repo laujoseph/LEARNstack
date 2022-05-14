@@ -1,0 +1,16 @@
+{
+  "redirects": [
+    {
+      "source": "/articles",
+      "destination": "https://musterclass-server.vercel.app/articles"
+    },
+    {
+      "source": "/auth",
+      "destination": "https://musterclass-server.vercel.app/auth"
+    },
+    {
+      "source": "/subs",
+      "destination": "https://musterclass-server.vercel.app/subs"
+    }
+  ]
+}
