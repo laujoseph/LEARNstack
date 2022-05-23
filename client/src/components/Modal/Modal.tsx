@@ -39,7 +39,7 @@ const ModalComponent = ({ text, para, isSignupFlow }: ModalProps) => {
     let response;
     if (isSignupFlow) {
       const { data: signUpData } = await axios.post(
-        "http://localhost:8080/auth/signup/",
+        `${process.env.BACKEND_URI}/auth/signup/`,
         {
           email,
           password,
@@ -48,7 +48,7 @@ const ModalComponent = ({ text, para, isSignupFlow }: ModalProps) => {
       response = signUpData;
     } else {
       const { data: loginData } = await axios.post(
-        "http://localhost:8080/auth/login/",
+        `${process.env.BACKEND_URI}/auth/login/`,
         {
           email,
           password,

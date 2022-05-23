@@ -67,8 +67,8 @@ router.post("/session", checkAuth_1.checkAuth, (req, res) =>
             quantity: 1,
           },
         ],
-        success_url: "https://musterclass-client.vercel.app/articles",
-        cancel_url: "https://musterclass-client.vercel.app/article-plans",
+        success_url: `${process.env.FRONTEND_URI}/articles`,
+        cancel_url: `${process.env.FRONTEND_URI}/article-plans`,
         customer: user.stripeCustomerId,
       },
       {

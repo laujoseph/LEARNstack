@@ -7,7 +7,7 @@ const DeleteArticle = () => {
 
   const handleClick = () => {
     console.log(instructorName);
-    axios.post("http://localhost:8080/articles/delete", {
+    axios.post(`${process.env.BACKEND_URI}/articles/delete`, {
       instructor: instructorName,
     });
     if (instructorName) {

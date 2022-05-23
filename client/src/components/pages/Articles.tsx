@@ -33,7 +33,7 @@ const Articles = () => {
   }, []);
   const fetchArticles = async () => {
     const { data: response } = await axios.get(
-      "http://localhost:8080/articles"
+      `${process.env.BACKEND_URI}/articles`
     );
     setArticles(response);
   };
