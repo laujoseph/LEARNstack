@@ -2,15 +2,15 @@
   "redirects": [
     {
       "source": "/articles",
-      "destination": "https://musterclass-client.vercel.app/articles"
+      "destination": "https://muster-class-nine.vercel.app/articles"
     },
     {
       "source": "/auth",
-      "destination": "https://musterclass-client.vercel.app/auth"
+      "destination": "https://muster-class-nine.vercel.app/auth"
     },
     {
       "source": "/subs",
-      "destination": "https://musterclass-client.vercel.app/subs"
+      "destination": "https://muster-class-nine.vercel.app/subs"
     }
   ]
 }
