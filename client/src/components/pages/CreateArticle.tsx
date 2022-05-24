@@ -31,7 +31,7 @@ const CreateArticle = () => {
       bannerUrl,
       instructorName
     );
-    axios.post(`${process.env.BACKEND_URI}/articles/create`, {
+    axios.post(`http://localhost:8080/articles/create`, {
       title: title,
       imageUrl: imageUrl,
       content: content,

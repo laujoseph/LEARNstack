@@ -33,7 +33,7 @@ const FoodArticles = () => {
   }, []);
   const fetchArticles = async () => {
     const { data: response } = await axios.get(
-      `${process.env.BACKEND_URI}/articles/Food`
+      `http://localhost:8080/articles/Food`
     );
     setArticles(response);
     console.log(response);

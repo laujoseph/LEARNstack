@@ -39,9 +39,7 @@ const UserProvider = ({ children }: any) => {
 
   // fetch our users
   const fetchUser = async () => {
-    const { data: response } = await axios.get(
-      `${process.env.BACKEND_URI}/auth/me`
-    );
+    const { data: response } = await axios.get(`http://localhost:8080/auth/me`);
 
     // if data
     if (response.data && response.data.user) {

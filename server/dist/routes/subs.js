@@ -67,8 +67,8 @@ router.post("/session", checkAuth_1.checkAuth, (req, res) =>
             quantity: 1,
           },
         ],
-        success_url: `${process.env.FRONTEND_URI}/articles`,
-        cancel_url: `${process.env.FRONTEND_URI}/article-plans`,
+        success_url: "http://localhost:3000/articles",
+        cancel_url: "http://localhost:3000/article-plans",
         customer: user.stripeCustomerId,
       },
       {

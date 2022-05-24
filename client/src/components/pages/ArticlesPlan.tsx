@@ -22,7 +22,7 @@ const ArticlesPlan = () => {
 
   const fetchPrices = async () => {
     const { data: response } = await axios.get(
-      `${process.env.BACKEND_URI}/subs/prices`
+      `http://localhost:8080/subs/prices`
     );
     console.log(response.data);
     setPrices(response.data);
@@ -30,7 +30,7 @@ const ArticlesPlan = () => {
 
   const createSession = async (priceId: string) => {
     const { data: response } = await axios.post(
-      `${process.env.BACKEND_URI}/subs/session`,
+      `http://localhost:8080/subs/session`,
       {
         priceId,
       }

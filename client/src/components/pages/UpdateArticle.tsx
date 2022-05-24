@@ -30,7 +30,7 @@ const UpdateArticle = () => {
       bannerUrl,
       instructorName
     );
-    axios.put(`${process.env.BACKEND_URI}/articles/update`, {
+    axios.put(`http://localhost:8080/articles/update`, {
       title: title,
       imageUrl: imageUrl,
       content: content,

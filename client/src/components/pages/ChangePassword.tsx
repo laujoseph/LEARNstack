@@ -23,7 +23,7 @@ const ChangePassword = () => {
 
   const updatePassword = () => {
     if (newPassword === newPassword2) {
-      axios.put<any>(`${process.env.BACKEND_URI}/auth/changepass`, {
+      axios.put<any>(`http://localhost:8080/auth/changepass`, {
         email: userEmail,
         newPassword: newPassword,
       });
