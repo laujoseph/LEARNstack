@@ -106,7 +106,7 @@ const FaqBar = () => {
               can learn practical skills, ignite new passions, and get everyday
               wisdom. Check out our{" "}
               {
-                <Link href="https://muster-class-nine.vercel.app/articles">
+                <Link href="https://muster-class-nine.vercel.app/articles/">
                   catalogue
                 </Link>
               }{" "}
