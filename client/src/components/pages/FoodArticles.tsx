@@ -33,7 +33,7 @@ const FoodArticles = () => {
   }, []);
   const fetchArticles = async () => {
     const { data: response } = await axios.get(
-      `http://localhost:8080/articles/Food`
+      `https://musterclass-server.herokuapp.com/articles/Food`
     );
     setArticles(response);
     console.log(response);

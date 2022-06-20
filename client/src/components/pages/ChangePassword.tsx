@@ -23,10 +23,13 @@ const ChangePassword = () => {
 
   const updatePassword = () => {
     if (newPassword === newPassword2) {
-      axios.put<any>(`http://localhost:8080/auth/changepass`, {
-        email: userEmail,
-        newPassword: newPassword,
-      });
+      axios.put<any>(
+        `https://musterclass-server.herokuapp.com/auth/changepass`,
+        {
+          email: userEmail,
+          newPassword: newPassword,
+        }
+      );
       alert("Password changed successfully!");
     } else {
       alert("Passwords do not match.");

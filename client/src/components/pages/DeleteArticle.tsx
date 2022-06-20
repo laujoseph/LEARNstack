@@ -7,7 +7,7 @@ const DeleteArticle = () => {
 
   const handleClick = () => {
     console.log(instructorName);
-    axios.post(`http://localhost:8080/articles/delete`, {
+    axios.post(`https://musterclass-server.herokuapp.com/articles/delete`, {
       instructor: instructorName,
     });
     if (instructorName) {

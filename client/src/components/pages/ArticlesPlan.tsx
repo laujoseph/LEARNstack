@@ -22,7 +22,7 @@ const ArticlesPlan = () => {
 
   const fetchPrices = async () => {
     const { data: response } = await axios.get(
-      `http://localhost:8080/subs/prices`
+      `https://musterclass-server.herokuapp.com/subs/prices`
     );
     console.log(response.data);
     setPrices(response.data);
@@ -30,7 +30,7 @@ const ArticlesPlan = () => {
 
   const createSession = async (priceId: string) => {
     const { data: response } = await axios.post(
-      `http://localhost:8080/subs/session`,
+      `https://musterclass-server.herokuapp.com/subs/session`,
       {
         priceId,
       }

@@ -31,7 +31,7 @@ const CreateArticle = () => {
       bannerUrl,
       instructorName
     );
-    axios.post(`http://localhost:8080/articles/create`, {
+    axios.post(`https://musterclass-server.herokuapp.com/articles/create`, {
       title: title,
       imageUrl: imageUrl,
       content: content,

@@ -26,7 +26,7 @@ const ArticleDetails = () => {
 
   const fetchArticles = async () => {
     const { data: response } = await axios.get(
-      `http://localhost:8080/articles/course/${title}`
+      `https://musterclass-server.herokuapp.com/articles/course/${title}`
     );
     setArticles(response);
     console.log(response);
