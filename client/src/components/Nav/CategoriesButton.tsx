@@ -59,7 +59,7 @@ export default function CatButton() {
           <MenuItem onClick={handleClose}>Sports</MenuItem>
         </Link>
         <Link
-          href="/articles"
+          href="/articles/"
           style={{ textDecoration: "none", color: "black" }}
         >
           <MenuItem onClick={handleClose}>All</MenuItem>
