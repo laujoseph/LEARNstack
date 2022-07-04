@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/articles",
-      "destination": "https://muster-class-nine.vercel.app/articles"
+      "destination": "https://muster-class-nine.vercel.app/articles/"
     },
     {
       "source": "/auth",
