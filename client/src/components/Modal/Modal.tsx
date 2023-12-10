@@ -39,7 +39,7 @@ const ModalComponent = ({ text, para, isSignupFlow }: ModalProps) => {
     let response;
     if (isSignupFlow) {
       const { data: signUpData } = await axios.post(
-        `https://musterclass-server.herokuapp.com/auth/signup/`,
+        `https://musterclassserver-production.up.railway.app/auth/signup/`,
         {
           email,
           password,
@@ -48,7 +48,7 @@ const ModalComponent = ({ text, para, isSignupFlow }: ModalProps) => {
       response = signUpData;
     } else {
       const { data: loginData } = await axios.post(
-        `https://musterclass-server.herokuapp.com/auth/login/`,
+        `https://musterclassserver-production.up.railway.app/auth/login/`,
         {
           email,
           password,
