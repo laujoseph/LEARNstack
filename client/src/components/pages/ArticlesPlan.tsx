@@ -30,7 +30,7 @@ const ArticlesPlan = () => {
 
   const createSession = async (priceId: string) => {
     const { data: response } = await axios.post(
-      `https://musterclass-server.herokuapp.com/subs/session`,
+      `https://musterclassserver-production.up.railway.app/subs/session`,
       {
         priceId,
       }
