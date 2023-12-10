@@ -153,10 +153,10 @@ router.get("/me", checkAuth, async (req, res) => {
     errors: [],
     data: {
       user: {
-        id: user._id,
-        email: user.email,
-        stripeCustomerId: user.stripeCustomerId,
-        isAdmin: user.isAdmin,
+        id: user?._id,
+        email: user?.email,
+        stripeCustomerId: user?.stripeCustomerId,
+        isAdmin: user?.isAdmin,
       },
     },
   });
