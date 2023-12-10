@@ -67,8 +67,8 @@ router.post("/session", checkAuth_1.checkAuth, (req, res) =>
             quantity: 1,
           },
         ],
-        success_url: "https://muster-class-nine.vercel.app/articles/",
-        cancel_url: "https://muster-class-nine.vercel.app/article-plans/",
+        success_url: "https://muster-class-nine.vercel.app/articles",
+        cancel_url: "https://muster-class-nine.vercel.app/article-plans",
         customer: user.stripeCustomerId,
       },
       {
