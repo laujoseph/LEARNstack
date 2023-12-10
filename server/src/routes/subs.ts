@@ -31,7 +31,7 @@ router.post("/session", checkAuth, async (req, res) => {
       ],
       success_url: "https://muster-class-nine.vercel.app/articles/",
       cancel_url: "https://muster-class-nine.vercel.app/article-plans/",
-      customer: user.stripeCustomerId,
+      customer: user?.stripeCustomerId,
     },
     {
       apiKey: process.env.STRIPE_SECRET_KEY,
