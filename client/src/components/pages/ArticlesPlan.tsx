@@ -22,7 +22,7 @@ const ArticlesPlan = () => {
 
   const fetchPrices = async () => {
     const { data: response } = await axios.get(
-      `https://musterclass-server.herokuapp.com/subs/prices`
+      `https://musterclassserver-production.up.railway.app/subs/prices`
     );
     console.log(response.data);
     setPrices(response.data);

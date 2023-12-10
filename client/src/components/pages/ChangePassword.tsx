@@ -24,7 +24,7 @@ const ChangePassword = () => {
   const updatePassword = () => {
     if (newPassword === newPassword2) {
       axios.put<any>(
-        `https://musterclass-server.herokuapp.com/auth/changepass`,
+        `https://musterclassserver-production.up.railway.app/auth/changepass`,
         {
           email: userEmail,
           newPassword: newPassword,

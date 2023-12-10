@@ -30,7 +30,7 @@ const UpdateArticle = () => {
       bannerUrl,
       instructorName
     );
-    axios.put(`https://musterclass-server.herokuapp.com/articles/update`, {
+    axios.put(`https://musterclassserver-production.up.railway.app/articles/update`, {
       title: title,
       imageUrl: imageUrl,
       content: content,

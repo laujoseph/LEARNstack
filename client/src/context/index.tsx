@@ -40,7 +40,7 @@ const UserProvider = ({ children }: any) => {
   // fetch our users
   const fetchUser = async () => {
     const { data: response } = await axios.get(
-      `https://musterclass-server.herokuapp.com/auth/me`
+      `https://musterclassserver-production.up.railway.app/auth/me`
     );
 
     // if data

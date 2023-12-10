@@ -33,7 +33,7 @@ const MusicArticles = () => {
   }, []);
   const fetchArticles = async () => {
     const { data: response } = await axios.get(
-      `https://musterclass-server.herokuapp.com/articles/Music`
+      `https://musterclassserver-production.up.railway.app/articles/Music`
     );
     setArticles(response);
     console.log(response);

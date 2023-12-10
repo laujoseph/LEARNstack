@@ -33,7 +33,7 @@ const SportsArticles = () => {
   }, []);
   const fetchArticles = async () => {
     const { data: response } = await axios.get(
-      `https://musterclass-server.herokuapp.com/articles/Sports`
+      `https://musterclassserver-production.up.railway.app/articles/Sports`
     );
     setArticles(response);
     console.log(response);
